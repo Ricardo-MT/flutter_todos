@@ -21,6 +21,7 @@ dependencies:
     path: packages/todos_api
   todos_repository:
     path: packages/todos_repository
+  wid_design_system: ^0.2.2
 
 dev_dependencies:
   bloc_test: ^9.1.2
@@ -32,3 +33,17 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+
+  fonts:
+    - family: Quicksand
+      fonts:
+        - asset: packages/wid_design_system/fonts/Quicksand-Bold.ttf
+          weight: 700
+        - asset: packages/wid_design_system/fonts/Quicksand-SemiBold.ttf
+          weight: 600
+        - asset: packages/wid_design_system/fonts/Quicksand-Medium.ttf
+          weight: 500
+        - asset: packages/wid_design_system/fonts/Quicksand-Regular.ttf
+          weight: 400
+        - asset: packages/wid_design_system/fonts/Quicksand-Light.ttf
+          weight: 300

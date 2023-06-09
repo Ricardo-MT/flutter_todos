@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_todos/edit_todo/edit_todo.dart';
 import 'package:flutter_todos/l10n/l10n.dart';
 import 'package:todos_repository/todos_repository.dart';
+import 'package:wid_design_system/wid_design_system.dart';
 
 class EditTodoPage extends StatelessWidget {
   const EditTodoPage({super.key});
@@ -29,7 +30,7 @@ class EditTodoPage extends StatelessWidget {
           previous.status != current.status &&
           current.status == EditTodoStatus.success,
       listener: (context, state) => Navigator.of(context).pop(),
-      child: const EditTodoView(),
+      child: const WidTapToHideKeyboard(child: EditTodoView()),
     );
   }
 }
@@ -59,9 +60,6 @@ class EditTodoView extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         tooltip: l10n.editTodoSaveButtonTooltip,
-        shape: const ContinuousRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(32)),
-        ),
         backgroundColor: status.isLoadingOrSuccess
             ? fabBackgroundColor.withOpacity(0.5)
             : fabBackgroundColor,

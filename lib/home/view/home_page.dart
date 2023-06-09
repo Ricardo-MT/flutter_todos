@@ -82,17 +82,3 @@ class _HomeTabButton extends StatelessWidget {
     );
   }
 }
-
-class DummyPage extends StatelessWidget {
-  const DummyPage({required this.title, super.key});
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(title),
-      ),
-    );
-  }
-}
