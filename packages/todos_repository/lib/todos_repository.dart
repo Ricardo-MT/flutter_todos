@@ -1,4 +1,4 @@
-/// A repository that handles todo related requests
+/// A repository that handles to_do related requests
 library todos_repository;
 
 export 'package:todos_api/todos_api.dart' show Todo;
